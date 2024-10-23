@@ -16,6 +16,14 @@ blockquote {
 	font-family: "Nunito Sans", sans-serif;
 }
 
+.paragraph-container {
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+	padding-left: 16px;
+	padding-top: 44px;
+	padding-bottom: 44px;
+	margin: 25px 0px;
+}
 
 header {
 	padding-top: 56px;

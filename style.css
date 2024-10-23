@@ -26,6 +26,16 @@ body {
 	body {
 		max-width: 1170px;
 	}
+
+	nav {
+		& a span {
+			transition: transform 300ms ease-in-out;
+		}
+
+		& a:hover span {
+			transform: translateX(10px);
+		}
+	}
 }
 
 
@@ -69,7 +79,7 @@ nav {
 	border-bottom: 2px solid #000000;
 	padding: 16px 25px;
 
-	& :nth-child(2){
+	& :nth-child(2) {
 		display: flex;
 		justify-content: space-between;
 	}
@@ -78,11 +88,10 @@ nav {
 
 	& a {
 		color: #000FB0;
+	}
 
-		/* &:hover{
-			color: red !important;
-		} */
-
+	& span {
+		padding-left: 1.5em;
 	}
 
 }
@@ -141,3 +150,4 @@ h1 {
 	}
 
 }
+

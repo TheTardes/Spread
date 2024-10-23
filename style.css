@@ -91,12 +91,35 @@ nav {
 	}
 
 	& span {
-		padding-left: 1.5em;
+		padding-left: 0.5em;
 	}
 
 }
 
+footer {
+	&: :nth-child(1) {
+		font-size: 0.875em;
+		font-weight: 400;
+		line-height: 1.72em;
 
+		display: flex;
+		justify-content: space-between;
+
+		&section{
+			font-style: italic;
+
+			&a{
+				color: #989696;
+				text-decoration: solid;
+
+				&:hover{
+					color: #000FB0;
+				}
+			}
+		}
+		
+	}
+}
 
 h1 {
 	font-size: 3.43em;
@@ -150,4 +173,3 @@ h1 {
 	}
 
 }
-

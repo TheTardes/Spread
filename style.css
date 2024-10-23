@@ -22,12 +22,13 @@ blockquote {
 	border-top: 2px solid black;
 	padding-left: 16px;
 	padding-top: 44px;
-	padding-bottom: 44px;
-	margin: 25px 0px;
+	padding-bottom:44px;
+	margin: 0px 25px;
+	width: 325px;
 }
 
 .quotes {
-	padding: 12px 16px;
+	padding: 16px 16px;
 	background-color: #F3FFAF;
 	font-style: italic;
 	border: 1px solid black;
@@ -48,6 +49,7 @@ h1 {
 	line-height: 44px;
 	font-weight: 500;
 	text-transform: uppercase;
+	margin: 25px 30px;
 
 	display: flex;
 	flex-direction: column;
@@ -55,11 +57,36 @@ h1 {
 	gap: 12px;
 
 
-	& span {
-		border: 2px solid #000000;
-		padding: 12px 16px;
-		border-radius: 3px;
-			}
+	& > span {
+		&:nth-child(1),
+		&:nth-child(2) span,
+		&:nth-child(3) {
+		  border: 2px solid #000000;
+		  padding: 12px 16px;
+		  border-radius: 3px;
+		}
+		&:nth-child(2) {
+		  display: flex;
+		  align-self: flex-end;
+		  & > :nth-child(1) {
+			width: 100px;
+			border-right: none;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		  }
+		  & > :nth-child(2) {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		  }
+		}
+	
+		&:nth-child(3) {
+		  background-color: #f3ffaf;
+		  font-style: italic;
+		  align-self: flex-start;
+		}
+	  }
+
 		}
 	
 

@@ -30,8 +30,12 @@ body {
 }
 
 @media (min-width: 1440px) {
+
 	body {
 		max-width: 1170px;
+		font-size: 44px;
+		line-height: 1.83rem;
+
 	}
 
 	nav {
@@ -64,11 +68,13 @@ blockquote {
 	& :nth-child(1) {
 		margin-bottom: 24px;
 	}
+
+
 }
 
 .quotes {
 	padding: 16px 16px;
-	background-color:var(--yellow);
+	background-color: var(--yellow);
 	font-style: italic;
 	border: 1px solid black;
 	border-radius: 2px;
@@ -80,8 +86,6 @@ blockquote {
 
 nav {
 
-	/* font-size: 0.875rem;
-	line-height: 1.72rem; */
 	border-bottom: 2px solid #000000;
 	padding: 16px 25px;
 
@@ -105,8 +109,7 @@ nav {
 footer {
 
 	&>:nth-child(1) {
-		/* font-size: 0.875rem;
-		line-height: 1.72rem; */
+
 		border-top: 2px solid #000000;
 		padding: 16px 25px;
 
@@ -131,7 +134,7 @@ footer {
 
 	&>:nth-child(2) {
 
-		& p{
+		& p {
 			padding: 12px;
 			border: 1.5px solid #000000;
 			font-size: 1.125rem;
@@ -184,7 +187,7 @@ h1 {
 		}
 
 		&:nth-child(3) {
-			background-color:var(--yellow);
+			background-color: var(--yellow);
 			font-style: italic;
 			font-weight: 400;
 		}

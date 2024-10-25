@@ -23,7 +23,7 @@ html {
 
 
 body {
-	max-width: 375px;
+	max-width: 500px;
 	margin: 0 auto;
 }
 
@@ -332,7 +332,7 @@ h1 {
 	}
 
 	body {
-		max-width: 1170px;
+		max-width: 1300px;
 
 	}
 
@@ -419,13 +419,13 @@ h1 {
 
 		&:nth-of-type(2n) {
 			border-right: 2px solid black;
-			padding-right: 104px;
+			padding-right: 102px;
 		}
 
 
 		&:nth-of-type(2n+1) {
 			border-left: 2px solid black;
-			padding-left: 104px;
+			padding-left: 102px;
 		}
 
 		& :nth-child(1) {
@@ -437,6 +437,7 @@ h1 {
 
 
 	.quotes {
+		
 		padding: 44px 44px;
 		background-color: var(--yellow);
 		font-style: italic;

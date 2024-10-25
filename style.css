@@ -17,8 +17,6 @@ html {
 	--blue-highlight: #A7FFE6;
 	--links: #000FB0;
 	--green-highlight: #B0FFA7;
-
-
 }
 
 
@@ -27,7 +25,7 @@ body {
 	margin: 0 auto;
 }
 
-em{
+em {
 	font-weight: 600;
 }
 
@@ -38,15 +36,30 @@ blockquote {
 
 #final-quote {
 
-	font-size: 1.5rem;
-	line-height: 2.125rem;
+	margin-inline: 25px;
+	position: relative;
 
-	background-color: var(--blue-highlight);
 
-	width: fit-content;
-	margin-left: auto;
 
-	font-style: italic;
+	& div {
+		position: absolute;
+		width: 100%;
+		height: 75%;
+		bottom: 0;
+		background-color: var(--blue-highlight);
+	}
+
+	& p {
+		position: relative;
+		z-index: 2;
+		font-size: 1.120rem;
+		line-height: 1.5rem;
+		text-align: right;
+		
+
+		font-style: italic;
+
+	}
 
 
 }
@@ -57,16 +70,16 @@ blockquote {
 	padding-bottom: 34px;
 	margin: 0px 25px;
 
-	span{
-		background-color:var(--green-highlight);
+	& span {
+		background-color: var(--green-highlight);
 	}
 
-	a {
-		color:var(--links);
+	& a {
+		color: var(--links);
 		font-weight: 600;
 	}
 
-	q {
+	& q {
 		font-style: italic;
 		color: var(--green);
 
@@ -126,6 +139,8 @@ nav {
 
 footer {
 
+	margin-bottom: 56px;
+
 	&>:nth-child(1) {
 
 		border-top: 2px solid #000000;
@@ -150,15 +165,32 @@ footer {
 		}
 	}
 
-	&>:nth-child(2) {
+}
+
+
+.mood-board-tabs {
+	margin-block: 32px;
+
+	&>section {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		margin: 0px 25px;
+
 
 		& p {
-			padding: 12px;
+			padding: 8px 12px;
 			border: 1.5px solid #000000;
-			font-size: 1.125rem;
-			line-height: 2.25rem;
-
 			width: fit-content;
+
+			&.bg-yellow {
+				background-color: var(--yellow);
+			}
+		}
+
+		&:nth-child(2) {
+			margin-top: 12px;
+			justify-content: end;
 		}
 	}
 }

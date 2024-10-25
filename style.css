@@ -14,7 +14,7 @@ html {
 
 :root {
 	--yellow: #f3ffaf;
-	--blue-highlight:#A7FFE6;
+	--blue-highlight: #A7FFE6;
 
 
 }
@@ -32,18 +32,18 @@ blockquote {
 	font-family: "Nunito Sans", sans-serif;
 }
 
-#final-quote{
+#final-quote {
 
 	font-size: 1.5rem;
 	line-height: 2.125rem;
 
-	background-color:var(--blue-highlight);
+	background-color: var(--blue-highlight);
 
 	width: fit-content;
 	margin-left: auto;
 
 	font-style: italic;
-	
+
 
 }
 
@@ -202,6 +202,35 @@ h1 {
 	body {
 		max-width: 600px;
 	}
+
+	html {
+		font-size: 20px;
+	}
+
+	.paragraph-container {
+
+		max-width: 600px;
+		padding-top: 68px;
+		padding-bottom: 68px;
+		margin: 0px auto;
+
+		&:nth-of-type(2n) {
+			border-right: 2px solid black;
+			padding-right: 68px;
+		}
+
+
+		&:nth-of-type(2n+1) {
+			border-left: 2px solid black;
+			padding-left: 68px;
+		}
+
+		& :nth-child(1) {
+			margin-bottom: 68px;
+		}
+
+	}
+
 }
 
 @media (min-width: 1440px) {

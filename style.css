@@ -20,6 +20,8 @@ html {
 	--blue-highlight: #A7FFE6;
 	--links: #000FB0;
 	--green-highlight: #B0FFA7;
+
+	--body-width:400px;
 }
 
 p {
@@ -28,7 +30,7 @@ p {
 
 
 body {
-	max-width: 400px;
+	max-width: var(--body-width);
 	margin: 0 auto;
 }
 
@@ -315,8 +317,8 @@ h1 {
 
 @media (min-width:600px) {
 
-	body {
-		max-width: 500px;
+	:root{
+		--body-width:500px;
 	}
 
 	h1 {
@@ -393,8 +395,10 @@ h1 {
 
 
 @media (min-width: 816px) {
-	body {
-		max-width: 800px;
+	
+	:root{
+		--body-width:800px;
+		--paragraph-width:685px;
 	}
 
 	html {
@@ -408,6 +412,11 @@ h1 {
 				border-right: 2px solid black;
 				padding-right: 66px;
 			}
+
+			& .black-square {
+				right: calc((var(--body-width)- var(--paragraph-width))/2);
+				transform: translateY(-50%) translateX(50%);
+			}
 		}
 
 
@@ -416,6 +425,11 @@ h1 {
 				border-left: 2px solid black;
 				padding-left: 66px;
 			}
+
+			& .black-square {
+				left: calc((var(--body-width)- var(--paragraph-width))/2);
+				transform: translateY(50%) translateX(-50%);
+			}
 		}
 	}
 
@@ -423,7 +437,7 @@ h1 {
 
 	.paragraph-container {
 
-		max-width: 685px;
+		max-width: var(--paragraph-width);
 		padding-top: 130px;
 		padding-bottom: 130px;
 		margin: 0px auto;
@@ -449,6 +463,14 @@ h1 {
 		transform: translateY(50%);
 
 
+	}
+
+	.black-square{
+		position: absolute;
+		top: 0;
+		width: 32px;
+		height: 32px;
+		background-color: #000000;
 	}
 
 
@@ -491,9 +513,7 @@ h1 {
 
 	nav {
 		padding: 24px 0px;
-
 	}
-
 
 }
 
@@ -505,9 +525,9 @@ h1 {
 		line-height: 44px;
 	}
 
-	body {
-		max-width: 1170px;
-
+	:root{
+		--body-width:1170px;
+		--paragraph-width:970px;
 	}
 
 	.sticky-button {
@@ -576,8 +596,6 @@ h1 {
 	}
 
 	.paragraph-container {
-
-		max-width: 970px;
 		padding-top: 200px;
 		padding-bottom: 200px;
 		margin: 0px auto;
@@ -601,7 +619,6 @@ h1 {
 	}
 
 	.paragraph-box {
-		max-width: 1300px;
 
 		&:nth-of-type(2n) {
 			& .paragraph-container {

@@ -134,7 +134,9 @@ blockquote {
 	}
 
 }
-
+.rotated-titles{
+	display: none;
+}
 .quotes {
 
 	margin-inline: 25px;
@@ -386,10 +388,10 @@ h1 {
 
 
 
-@media (min-width: 816px) {
+@media (min-width: 870px) {
 
 	:root {
-		--body-width: 800px;
+		--body-width: 860px;
 		--paragraph-width: 685px;
 	}
 
@@ -409,6 +411,10 @@ h1 {
 				right: calc((var(--body-width) - var(--paragraph-width))/2);
 				transform: translateY(-50%) translateX(calc(50% - 1px));
 			}
+
+			& .rotated-titles {
+				right: 0;
+			}
 		}
 
 
@@ -421,6 +427,10 @@ h1 {
 			& .black-square {
 				left: calc((var(--body-width) - var(--paragraph-width))/2);
 				transform: translateY(-50%) translateX(calc(-50% + 1px));
+			}
+
+			& .rotated-titles {
+				left: 0;
 			}
 		}
 	}
@@ -458,11 +468,12 @@ h1 {
 	}
 
 	.rotated-titles {
+		display: block;
 		position: absolute;
-		top: 100px;
-		left: 0px;
+		top: 20%;
 		width: fit-content;
 		transform: rotate(-90deg);
+
 	}
 
 	.black-square {
@@ -529,7 +540,7 @@ h1 {
 	}
 
 	:root {
-		--body-width: 1170px;
+		--body-width: 1180px;
 		--paragraph-width: 970px;
 	}
 
@@ -608,8 +619,6 @@ h1 {
 		& :nth-child(1) {
 			margin-bottom: 30px;
 		}
-
-
 	}
 
 	.quotes {
@@ -628,8 +637,6 @@ h1 {
 				padding-right: 102px;
 			}
 		}
-
-
 		&:nth-of-type(2n+1) {
 			& .paragraph-container {
 				padding-left: 102px;
@@ -653,7 +660,7 @@ h1 {
 	} */
 }
 
-@media (min-width:1440px) {
+@media (min-width:1540px) {
 	:root {
 		--body-width: 1300px;
 		--paragraph-width: 1170px;
@@ -666,9 +673,7 @@ h1 {
 		line-height: 104px;
 		gap: 34px;
 
-
 		&>span {
-
 			&:nth-child(1),
 			&:nth-child(2) span,
 			&:nth-child(3) {
@@ -676,16 +681,11 @@ h1 {
 				padding: 33px 44px;
 				border-radius: 8px;
 			}
-
 			&:nth-child(2) {
-
 				&> :nth-child(1) {
 					width: 400px;
 				}
-
 			}
-
 		}
-
 	}
 }

@@ -17,7 +17,6 @@ html {
 
 :root {
 	--yellow: #f3ffaf;
-	--blue-highlight: #A7FFE6;
 	--links: #000FB0;
 	--green-highlight: #B0FFA7;
 
@@ -39,12 +38,13 @@ em {
 	font-weight: 600;
 }
 
-h1, h2,
+h1,
+h2,
 blockquote {
 	font-family: "Nunito Sans", sans-serif;
 }
 
-/* #final-quote {
+#final-quote {
 
 	margin-right: 25px;
 	margin-left: auto;
@@ -52,32 +52,21 @@ blockquote {
 
 
 	& p {
-		position: relative;
-		display: inline;
 		font-size: 20px;
 		line-height: 24px;
 		text-align: right;
-		width: fit-content;
 		font-style: italic;
-		background-color: var(--blue-highlight);
 
-		&::before {
-			display: inline;
-			content: "";
-			z-index: -1;
-			position: absolute;
-			width: 100%;
-			max-width: 100%;
-			height: 60%;
-			bottom: 0;
-			right: 0;
-			
+		& span {
+			background: linear-gradient(180deg,
+			 rgba(0, 0, 0, 0) 0%, 
+			 rgba(0, 0, 0, 0) 50%, 
+			 rgba(167, 255, 230, 1) 50%, 
+			 rgba(167, 255, 230, 1) 100%
+			 );
 		}
-
 	}
-
-
-} */
+}
 
 .sticky-button {
 	z-index: 10;
@@ -134,9 +123,11 @@ blockquote {
 	}
 
 }
-.rotated-titles{
+
+.rotated-titles {
 	display: none;
 }
+
 .quotes {
 
 	margin-inline: 25px;
@@ -384,6 +375,8 @@ h1 {
 		}
 	}
 
+	
+
 }
 
 
@@ -435,36 +428,37 @@ h1 {
 				left: 0;
 			}
 		}
-		&:nth-child(1){
-			& .rotated-titles{
+
+		&:nth-child(1) {
+			& .rotated-titles {
 				top: 40%;
 			}
 		}
 
-		&:nth-child(2){
-			& .rotated-titles{
+		&:nth-child(2) {
+			& .rotated-titles {
 				top: 15%;
 			}
 		}
 
-		&:nth-child(3){
-			& .rotated-titles{
+		&:nth-child(3) {
+			& .rotated-titles {
 				top: 25%;
 			}
 		}
 
-		&:nth-child(4){
-			& .rotated-titles{
+		&:nth-child(4) {
+			& .rotated-titles {
 				top: 15%;
 			}
 		}
 
-		&:nth-child(5){
-			& .rotated-titles{
+		&:nth-child(5) {
+			& .rotated-titles {
 				top: 46%;
+			}
 		}
 	}
-}
 
 
 
@@ -546,15 +540,13 @@ h1 {
 
 	}
 
-	/* #final-quote {
-
+	#final-quote {
 				margin-block: 60px;
-
 				& p {
 					font-size: 27px;
 					line-height: 40px;
 				}
-			} */
+			}
 
 	nav {
 		padding: 24px 0px;
@@ -631,8 +623,12 @@ h1 {
 	}
 
 	nav {
+		& a{
+			display: flex;
+		}
 		& a span {
 			transition: transform 300ms ease-in-out;
+			display: block;
 		}
 
 		& a:hover span {
@@ -668,6 +664,7 @@ h1 {
 				padding-right: 102px;
 			}
 		}
+
 		&:nth-of-type(2n+1) {
 			& .paragraph-container {
 				padding-left: 102px;
@@ -676,19 +673,14 @@ h1 {
 	}
 
 
-	/* #final-quote {
-		margin-block: 140px;
+	#final-quote {
+		margin-block: 100px;
 
 		& p {
-
-			font-size: 44px;
-			line-height: 60px;
-
-
+			font-size: 32px;
+			line-height: 44px;
 		}
-
-
-	} */
+	}
 }
 
 @media (min-width:1440px) {
@@ -705,6 +697,7 @@ h1 {
 		gap: 34px;
 
 		&>span {
+
 			&:nth-child(1),
 			&:nth-child(2) span,
 			&:nth-child(3) {
@@ -712,6 +705,7 @@ h1 {
 				padding: 33px 44px;
 				border-radius: 8px;
 			}
+
 			&:nth-child(2) {
 				&> :nth-child(1) {
 					width: 400px;

@@ -457,6 +457,14 @@ h1 {
 
 	}
 
+	.rotated-titles {
+		position: absolute;
+		top: 100px;
+		left: 0px;
+		width: fit-content;
+		transform: rotate(-90deg);
+	}
+
 	.black-square {
 		position: absolute;
 		top: 0;
@@ -468,7 +476,7 @@ h1 {
 
 	h1 {
 		max-width: 70%;
-		margin-inline:0;
+		margin-inline: 0;
 		margin-top: 60px;
 		margin-bottom: 16px;
 		font-size: 74px;
@@ -644,7 +652,8 @@ h1 {
 
 	} */
 }
-@media (min-width:1440px){
+
+@media (min-width:1440px) {
 	:root {
 		--body-width: 1300px;
 		--paragraph-width: 1170px;

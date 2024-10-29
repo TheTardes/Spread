@@ -323,7 +323,7 @@ h1 {
 
 	h1 {
 		font-size: 64px;
-		line-height: 73px;
+		line-height: 64px;
 		gap: 18px;
 		margin-top: 40px;
 
@@ -382,14 +382,6 @@ h1 {
 		}
 	}
 
-	:root {
-
-		--yellow: #E8E9E4;
-		--blue-highlight: #E8E9E4;
-		--links: #000000;
-		--green-highlight: #E8E9E4;
-
-	}
 }
 
 
@@ -475,18 +467,20 @@ h1 {
 
 
 	h1 {
+		max-width: 70%;
+		margin-inline:0;
 		margin-top: 60px;
 		margin-bottom: 16px;
-		font-size: 104px;
-		line-height: 94px;
-		gap: 24px;
+		font-size: 74px;
+		line-height: 74px;
+		gap: 18px;
 
 		&>span {
 
 			&:nth-child(1),
 			&:nth-child(2) span,
 			&:nth-child(3) {
-				padding: 22px 33px;
+				padding: 22px 26px;
 				border: 4px solid #000000;
 				border-radius: 4px;
 			}
@@ -557,11 +551,11 @@ h1 {
 
 
 	h1 {
-		max-width: 950px;
+		max-width: 70%;
 		margin-top: 80px;
-		font-size: 120px;
-		line-height: 159px;
-		gap: 44px;
+		font-size: 94px;
+		line-height: 94px;
+		gap: 24px;
 
 
 		&>span {
@@ -570,14 +564,14 @@ h1 {
 			&:nth-child(2) span,
 			&:nth-child(3) {
 				border: 5px solid #000000;
-				padding: 12px 44px;
+				padding: 26px 30px;
 				border-radius: 6px;
 			}
 
 			&:nth-child(2) {
 
 				&> :nth-child(1) {
-					width: 400px;
+					width: 300px;
 				}
 
 			}
@@ -649,4 +643,40 @@ h1 {
 
 
 	} */
+}
+@media (min-width:1440px){
+	:root {
+		--body-width: 1300px;
+		--paragraph-width: 1170px;
+	}
+
+	h1 {
+		max-width: 76%;
+		margin-top: 80px;
+		font-size: 104px;
+		line-height: 104px;
+		gap: 34px;
+
+
+		&>span {
+
+			&:nth-child(1),
+			&:nth-child(2) span,
+			&:nth-child(3) {
+				border: 5px solid #000000;
+				padding: 33px 44px;
+				border-radius: 8px;
+			}
+
+			&:nth-child(2) {
+
+				&> :nth-child(1) {
+					width: 400px;
+				}
+
+			}
+
+		}
+
+	}
 }

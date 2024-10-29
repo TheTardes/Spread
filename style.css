@@ -21,7 +21,7 @@ html {
 	--links: #000FB0;
 	--green-highlight: #B0FFA7;
 
-	--body-width:400px;
+	--body-width: 400px;
 }
 
 p {
@@ -317,8 +317,8 @@ h1 {
 
 @media (min-width:600px) {
 
-	:root{
-		--body-width:500px;
+	:root {
+		--body-width: 500px;
 	}
 
 	h1 {
@@ -363,7 +363,7 @@ h1 {
 
 
 }
-	
+
 
 @media print {
 	.sticky-button {
@@ -376,7 +376,7 @@ h1 {
 	}
 
 	nav {
-		
+
 		&>:nth-child(2) {
 			display: none;
 		}
@@ -395,10 +395,10 @@ h1 {
 
 
 @media (min-width: 816px) {
-	
-	:root{
-		--body-width:800px;
-		--paragraph-width:685px;
+
+	:root {
+		--body-width: 800px;
+		--paragraph-width: 685px;
 	}
 
 	html {
@@ -414,8 +414,8 @@ h1 {
 			}
 
 			& .black-square {
-				right: calc((var(--body-width)- var(--paragraph-width))/2);
-				transform: translateY(-50%) translateX(50%);
+				right: calc((var(--body-width) - var(--paragraph-width))/2);
+				transform: translateY(-50%) translateX(calc(50% - 1px));
 			}
 		}
 
@@ -427,8 +427,8 @@ h1 {
 			}
 
 			& .black-square {
-				left: calc((var(--body-width)- var(--paragraph-width))/2);
-				transform: translateY(50%) translateX(-50%);
+				left: calc((var(--body-width) - var(--paragraph-width))/2);
+				transform: translateY(-50%) translateX(calc(-50% + 1px));
 			}
 		}
 	}
@@ -465,7 +465,7 @@ h1 {
 
 	}
 
-	.black-square{
+	.black-square {
 		position: absolute;
 		top: 0;
 		width: 32px;
@@ -476,6 +476,7 @@ h1 {
 
 	h1 {
 		margin-top: 60px;
+		margin-bottom: 16px;
 		font-size: 104px;
 		line-height: 94px;
 		gap: 24px;
@@ -525,9 +526,9 @@ h1 {
 		line-height: 44px;
 	}
 
-	:root{
-		--body-width:1170px;
-		--paragraph-width:970px;
+	:root {
+		--body-width: 1170px;
+		--paragraph-width: 970px;
 	}
 
 	.sticky-button {

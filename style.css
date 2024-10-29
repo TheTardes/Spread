@@ -19,6 +19,7 @@ html {
 	--yellow: #f3ffaf;
 	--links: #000FB0;
 	--green-highlight: #B0FFA7;
+	--green: #FF4000;
 
 	--body-width: 400px;
 }
@@ -134,7 +135,7 @@ blockquote {
 	padding: 16px 16px;
 	background-color: var(--yellow);
 	font-style: italic;
-	border: 2px solid black;
+	border: 1px solid black;
 
 	font-size: 1.125rem;
 	line-height: 1.56rem;
@@ -152,7 +153,7 @@ blockquote {
 		}
 
 		& .paragraph-container {
-			border-right: 2px solid black;
+			border-right: 1px solid black;
 			padding-right: 16px;
 
 		}
@@ -162,7 +163,7 @@ blockquote {
 
 	&:nth-of-type(2n+1) {
 		& .paragraph-container {
-			border-left: 2px solid black;
+			border-left: 1px solid black;
 			padding-left: 16px;
 		}
 	}
@@ -273,7 +274,7 @@ h1 {
 		&:nth-child(1),
 		&:nth-child(2) span,
 		&:nth-child(3) {
-			border: 2px solid #000000;
+			border: 1px solid #000000;
 			padding: 12px 12px;
 		}
 
@@ -359,6 +360,12 @@ h1 {
 
 
 @media print {
+
+	:root {
+		--yellow: #EBEBE8;
+		--links: #00000;
+		--green-highlight: #EBEBE8;
+	}
 	.sticky-button {
 		display: none;
 	}
@@ -369,13 +376,36 @@ h1 {
 	}
 
 	nav {
-
 		&>:nth-child(2) {
 			display: none;
 		}
 	}
 
+	.mood-board-tabs {
+		margin-block: 16px;
+		&>section {
+			& p {
+				padding: 6px 6px;
+				border: 1px solid #000000;
+				&.bg-yellow {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.paragraph-container {
 	
+		& a {
+			text-decoration: underline;
+		}
+	
+		& q {
+			font-style: italic;
+			font-weight: 400;
+		}
+	}
+
 
 }
 

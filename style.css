@@ -179,7 +179,6 @@ blockquote {
 
 nav {
 
-	border-bottom: 1px solid #000000;
 	padding: 8px 25px;
 	display: flex;
 	justify-content: space-between;
@@ -324,7 +323,7 @@ h1 {
 		font-size: 64px;
 		line-height: 73px;
 		gap: 18px;
-		margin-top: 60px;
+		margin-top: 40px;
 
 		&>span {
 
@@ -363,6 +362,35 @@ h1 {
 
 }
 	
+
+@media print {
+	.sticky-button {
+		display: none;
+	}
+
+	@page {
+		size: auto;
+		margin: 12mm;
+	}
+
+	nav {
+		
+		&>:nth-child(2) {
+			display: none;
+		}
+	}
+
+	:root {
+
+		--yellow: #E8E9E4;
+		--blue-highlight: #E8E9E4;
+		--links: #000000;
+		--green-highlight: #E8E9E4;
+
+	}
+}
+
+
 
 @media (min-width: 816px) {
 	body {
@@ -425,7 +453,7 @@ h1 {
 
 
 	h1 {
-		margin-top: 100px;
+		margin-top: 60px;
 		font-size: 104px;
 		line-height: 94px;
 		gap: 24px;
@@ -462,10 +490,7 @@ h1 {
 			} */
 
 	nav {
-
-		border-bottom: none;
 		padding: 24px 0px;
-
 
 	}
 
@@ -512,7 +537,7 @@ h1 {
 
 	h1 {
 		max-width: 950px;
-		margin-top: 90px;
+		margin-top: 80px;
 		font-size: 120px;
 		line-height: 159px;
 		gap: 44px;

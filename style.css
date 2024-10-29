@@ -14,6 +14,7 @@ html {
 	scroll-padding-top: 56px;
 }
 
+
 :root {
 	--yellow: #f3ffaf;
 	--blue-highlight: #A7FFE6;
@@ -21,9 +22,13 @@ html {
 	--green-highlight: #B0FFA7;
 }
 
+p {
+	white-space: collapse pretty;
+}
+
 
 body {
-	max-width: 500px;
+	max-width: 400px;
 	margin: 0 auto;
 }
 
@@ -37,7 +42,7 @@ blockquote {
 	font-family: "Nunito Sans", sans-serif;
 }
 
-#final-quote {
+/* #final-quote {
 
 	margin-right: 25px;
 	margin-left: auto;
@@ -46,36 +51,41 @@ blockquote {
 
 	& p {
 		position: relative;
+		display: inline;
 		font-size: 20px;
 		line-height: 24px;
 		text-align: right;
 		width: fit-content;
 		font-style: italic;
+		background-color: var(--blue-highlight);
 
 		&::before {
+			display: inline;
 			content: "";
 			z-index: -1;
 			position: absolute;
 			width: 100%;
+			max-width: 100%;
 			height: 60%;
 			bottom: 0;
-			background-color: var(--blue-highlight);
+			right: 0;
+			
 		}
 
 	}
 
 
-}
+} */
 
 .sticky-button {
 	z-index: 10;
-	display:flex;
+	display: flex;
 	justify-content: end;
 	padding-inline: 25px;
 
 	position: sticky;
 	right: 25px;
-	bottom: 25px;
+	bottom: 44px;
 
 	& a {
 		font-size: 24px;
@@ -87,11 +97,11 @@ blockquote {
 		height: 44px;
 		width: 44px;
 		border-radius: 4px;
-	
-		color:#FEFFF5;
+
+		color: #FEFFF5;
 	}
 
-	
+
 }
 
 .paragraph-container {
@@ -99,7 +109,7 @@ blockquote {
 	padding-top: 34px;
 	padding-bottom: 34px;
 	margin: 0px 25px;
-	border-bottom: 2px solid #000000;
+
 
 	& span {
 		position: relative;
@@ -129,60 +139,52 @@ blockquote {
 	padding: 16px 16px;
 	background-color: var(--yellow);
 	font-style: italic;
-	border: 1px solid black;
-	border-radius: 2px;
+	border: 2px solid black;
 
 	font-size: 1.125rem;
 	line-height: 1.56rem;
 	font-weight: 400;
-
-	position: absolute;
-	bottom: 0;
-	/* left: 0; */
-	transform: translateY(50%);
-	
-
-
 }
 
-.paragraph-box{
+
+.paragraph-box {
 	position: relative;
 
-	&:nth-of-type(2n){
-		& .quotes{
-			right: 0;
-		}
-	}
 
 	&:nth-of-type(2n) {
-		& .paragaraph-container{
-		border-right: 2px solid black;
-		padding-right: 16px;
+		& .quotes {
+			right: 0;
 		}
+
+		& .paragraph-container {
+			border-right: 2px solid black;
+			padding-right: 16px;
+
+		}
+
 	}
 
 
 	&:nth-of-type(2n+1) {
-		& .paragaraph-container{
-		border-left: 2px solid black;
-		padding-left: 16px;
+		& .paragraph-container {
+			border-left: 2px solid black;
+			padding-left: 16px;
 		}
 	}
-	
-	&:last-of-type .paragraph-container{
+
+	&:last-of-type .paragraph-container {
 		border-bottom: none;
 	}
 }
 
 nav {
 
-	border: 2px solid #000000;
-	margin: 25px;
-	padding: 8px 12px;
+	border-bottom: 1px solid #000000;
+	padding: 8px 25px;
 	display: flex;
 	justify-content: space-between;
 
-	& :nth-child(1){
+	&>:nth-child(1) {
 		display: flex;
 		gap: 16px;
 	}
@@ -258,11 +260,13 @@ footer {
 
 
 h1 {
+
 	font-size: 3.43rem;
 	line-height: 2.75rem;
 	font-weight: 500;
 	text-transform: uppercase;
-	margin: 30px 25px;
+	margin-top: 30px;
+	margin-inline: 25px;
 
 	display: flex;
 	flex-direction: column;
@@ -277,7 +281,6 @@ h1 {
 		&:nth-child(3) {
 			border: 2px solid #000000;
 			padding: 12px 12px;
-			border-radius: 3px;
 		}
 
 		&:nth-child(2) {
@@ -311,48 +314,166 @@ h1 {
 }
 
 
+@media (min-width:600px) {
+
+	body {
+		max-width: 500px;
+	}
+
+	h1 {
+		font-size: 64px;
+		line-height: 73px;
+		gap: 18px;
+		margin-top: 60px;
+
+		&>span {
+
+			&:nth-child(1),
+			&:nth-child(2) span,
+			&:nth-child(3) {
+				padding: 12px 16px;
+			}
+
+			&:nth-child(2) {
+
+				&> :nth-child(1) {
+					width: 150px;
+				}
+			}
+		}
+	}
+
+
+	.paragraph-box {
+		&:nth-of-type(2n) {
+			& .paragraph-container {
+
+				padding-right: 32px;
+			}
+		}
+
+
+		&:nth-of-type(2n+1) {
+			& .paragraph-container {
+				padding-left: 32px;
+			}
+		}
+	}
+
+
+}
+	
 
 @media (min-width: 816px) {
 	body {
-		max-width: 600px;
-	}
-
-	.sticky-button {
-
-		display:none;
+		max-width: 800px;
 	}
 
 	html {
 		font-size: 20px;
 	}
 
-	/* .paragraph-container {
 
-		max-width: 600px;
-		padding-top: 68px;
-		padding-bottom: 68px;
-		margin: 0px auto;
-
+	.paragraph-box {
 		&:nth-of-type(2n) {
-			border-right: 2px solid black;
-			padding-right: 68px;
+			& .paragraph-container {
+				border-right: 2px solid black;
+				padding-right: 66px;
+			}
 		}
 
 
 		&:nth-of-type(2n+1) {
-			border-left: 2px solid black;
-			padding-left: 68px;
+			& .paragraph-container {
+				border-left: 2px solid black;
+				padding-left: 66px;
+			}
 		}
+	}
+
+
+
+	.paragraph-container {
+
+		max-width: 685px;
+		padding-top: 130px;
+		padding-bottom: 130px;
+		margin: 0px auto;
+		border-bottom: 2px solid #000000;
+
 
 		& :nth-child(1) {
-			margin-bottom: 68px;
+			margin-bottom: 30px;
 		}
 
-	} */
+	}
+
+	.quotes {
+		border: 2px solid #000000;
+		margin-inline: 0;
+		max-width: 70%;
+		font-size: 24px;
+		padding: 22px 33px;
+		width: fit-content;
+		position: absolute;
+		bottom: 0;
+		/* left: 0; */
+		transform: translateY(50%);
+
+
+	}
+
+
+	h1 {
+		margin-top: 100px;
+		font-size: 104px;
+		line-height: 94px;
+		gap: 24px;
+
+		&>span {
+
+			&:nth-child(1),
+			&:nth-child(2) span,
+			&:nth-child(3) {
+				padding: 22px 33px;
+				border: 4px solid #000000;
+				border-radius: 4px;
+			}
+
+			&:nth-child(2) {
+
+				&> :nth-child(1) {
+					width: 200px;
+				}
+			}
+
+		}
+
+	}
+
+	/* #final-quote {
+
+				margin-block: 60px;
+
+				& p {
+					font-size: 27px;
+					line-height: 40px;
+				}
+			} */
+
+	nav {
+
+		border-bottom: none;
+		padding: 24px 0px;
+
+
+	}
+
 
 }
 
-@media (min-width: 1440px) {
+
+@media (min-width: 1210px) {
 
 	html {
 		font-size: 24px;
@@ -360,14 +481,13 @@ h1 {
 	}
 
 	body {
-		max-width: 1300px;
+		max-width: 1170px;
 
 	}
 
 	.sticky-button {
-		
 
-		display:flex;
+		display: flex;
 		right: 0px;
 		bottom: 56px;
 
@@ -381,26 +501,22 @@ h1 {
 			height: 60px;
 			width: 60px;
 			border-radius: 8px;
-		
-			color:#FEFFF5;
+
+			color: #FEFFF5;
 		}
-		
+
 
 	}
 
 
 
 	h1 {
-		font-size: 130px;
-		line-height: 169px;
-		font-weight: 500;
-		text-transform: uppercase;
-
-		display: flex;
-		flex-direction: column;
-		align-items: start;
+		max-width: 950px;
+		margin-top: 90px;
+		font-size: 120px;
+		line-height: 159px;
 		gap: 44px;
-		margin: 94px 0px;
+
 
 		&>span {
 
@@ -410,10 +526,6 @@ h1 {
 				border: 5px solid #000000;
 				padding: 12px 44px;
 				border-radius: 6px;
-			}
-
-			&:nth-child(2) {
-				margin-right: 8%;
 			}
 
 			&:nth-child(2) {
@@ -440,66 +552,58 @@ h1 {
 
 	.paragraph-container {
 
-		max-width: 972px;
-		padding-top: 108px;
-		padding-bottom: 108px;
+		max-width: 970px;
+		padding-top: 200px;
+		padding-bottom: 200px;
 		margin: 0px auto;
+		border-bottom: 2px solid #000000;
 
 
 		& :nth-child(1) {
-			margin-bottom: 60px;
+			margin-bottom: 30px;
 		}
 
 
 	}
 
 	.quotes {
-		
+		font-size: 27px;
+		line-height: 40px;
 		padding: 44px 44px;
-		background-color: var(--yellow);
-		font-style: italic;
-		border: 2px solid black;
-		border-radius: 4px;
-
+		max-width: 100%;
 		width: fit-content;
-
 
 	}
 
-	.paragraph-box{
+	.paragraph-box {
+		max-width: 1300px;
+
 		&:nth-of-type(2n) {
-			& .paragraph-container{
-			border-right: 2px solid black;
-			padding-right: 102px;
+			& .paragraph-container {
+				padding-right: 102px;
 			}
 		}
 
 
 		&:nth-of-type(2n+1) {
-			& .paragraph-container{
-			border-left: 2px solid black;
-			padding-left: 102px;
+			& .paragraph-container {
+				padding-left: 102px;
 			}
 		}
 	}
 
 
-	
-
-	#final-quote {
+	/* #final-quote {
 		margin-block: 140px;
 
 		& p {
-			position: relative;
-			z-index: 2;
+
 			font-size: 44px;
 			line-height: 60px;
-			text-align: right;
-			width: fit-content;
-			font-style: italic;
+
 
 		}
 
 
-	}
+	} */
 }

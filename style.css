@@ -388,11 +388,11 @@ h1 {
 
 
 
-@media (min-width: 910px) {
+@media (min-width: 816px) {
 
 	:root {
-		--body-width: 900px;
-		--paragraph-width: 685px;
+		--body-width: 800px;
+		--paragraph-width: 700px;
 	}
 
 	html {
@@ -413,6 +413,7 @@ h1 {
 			}
 
 			& .rotated-titles {
+				transform-origin: right bottom;
 				right: 0;
 			}
 		}
@@ -430,10 +431,40 @@ h1 {
 			}
 
 			& .rotated-titles {
+				transform-origin: left top;
 				left: 0;
 			}
 		}
+		&:nth-child(1){
+			& .rotated-titles{
+				top: 40%;
+			}
+		}
+
+		&:nth-child(2){
+			& .rotated-titles{
+				top: 15%;
+			}
+		}
+
+		&:nth-child(3){
+			& .rotated-titles{
+				top: 25%;
+			}
+		}
+
+		&:nth-child(4){
+			& .rotated-titles{
+				top: 15%;
+			}
+		}
+
+		&:nth-child(5){
+			& .rotated-titles{
+				top: 46%;
+		}
 	}
+}
 
 
 
@@ -470,7 +501,6 @@ h1 {
 	.rotated-titles {
 		display: block;
 		position: absolute;
-		top: 20%;
 		width: fit-content;
 		transform: rotate(-90deg);
 		text-transform: uppercase;
@@ -533,7 +563,7 @@ h1 {
 }
 
 
-@media (min-width: 1310px) {
+@media (min-width: 1210px) {
 
 	html {
 		font-size: 24px;
@@ -541,8 +571,8 @@ h1 {
 	}
 
 	:root {
-		--body-width: 1270px;
-		--paragraph-width: 970px;
+		--body-width: 1170px;
+		--paragraph-width: 1060px;
 	}
 
 	.sticky-button {
@@ -571,7 +601,7 @@ h1 {
 
 
 	h1 {
-		max-width: 70%;
+		max-width: 60%;
 		margin-top: 80px;
 		font-size: 94px;
 		line-height: 94px;
@@ -591,7 +621,7 @@ h1 {
 			&:nth-child(2) {
 
 				&> :nth-child(1) {
-					width: 300px;
+					width: 250px;
 				}
 
 			}
@@ -624,7 +654,7 @@ h1 {
 
 	.quotes {
 		font-size: 27px;
-		line-height: 40px;
+		line-height: 32px;
 		padding: 44px 44px;
 		max-width: 100%;
 		width: fit-content;
@@ -661,10 +691,10 @@ h1 {
 	} */
 }
 
-@media (min-width:1540px) {
+@media (min-width:1440px) {
 	:root {
-		--body-width: 1440px;
-		--paragraph-width: 1170px;
+		--body-width: 1300px;
+		--paragraph-width: 1200px;
 	}
 
 	h1 {

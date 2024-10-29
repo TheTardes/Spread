@@ -39,7 +39,7 @@ em {
 	font-weight: 600;
 }
 
-h1,
+h1, h2,
 blockquote {
 	font-family: "Nunito Sans", sans-serif;
 }
@@ -388,10 +388,10 @@ h1 {
 
 
 
-@media (min-width: 870px) {
+@media (min-width: 910px) {
 
 	:root {
-		--body-width: 860px;
+		--body-width: 900px;
 		--paragraph-width: 685px;
 	}
 
@@ -473,6 +473,7 @@ h1 {
 		top: 20%;
 		width: fit-content;
 		transform: rotate(-90deg);
+		text-transform: uppercase;
 
 	}
 
@@ -532,7 +533,7 @@ h1 {
 }
 
 
-@media (min-width: 1210px) {
+@media (min-width: 1310px) {
 
 	html {
 		font-size: 24px;
@@ -540,7 +541,7 @@ h1 {
 	}
 
 	:root {
-		--body-width: 1180px;
+		--body-width: 1270px;
 		--paragraph-width: 970px;
 	}
 
@@ -662,7 +663,7 @@ h1 {
 
 @media (min-width:1540px) {
 	:root {
-		--body-width: 1300px;
+		--body-width: 1440px;
 		--paragraph-width: 1170px;
 	}
 

@@ -4,7 +4,7 @@ html {
 	font-weight: 400;
 	font-style: normal;
 
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.75rem;
 	font-weight: 400;
 
@@ -19,9 +19,9 @@ html {
 	--yellow: #f3ffaf;
 	--links: #000FB0;
 	--green-highlight: #B0FFA7;
-	--green: #FF4000;
+	--red: #FF4000;
 
-	--body-width: 400px;
+	--body-width: 500px;
 }
 
 p {
@@ -47,7 +47,7 @@ blockquote {
 
 #final-quote {
 
-	margin-right: 25px;
+	margin-right: 12px;
 	margin-left: auto;
 	width: fit-content;
 
@@ -76,7 +76,7 @@ blockquote {
 	padding-inline: 25px;
 
 	position: sticky;
-	right: 25px;
+	right: 12px;
 	bottom: 44px;
 
 	& a {
@@ -100,7 +100,7 @@ blockquote {
 
 	padding-top: 34px;
 	padding-bottom: 34px;
-	margin: 0px 25px;
+	margin: 0px 12px;
 
 
 	& span {
@@ -115,7 +115,7 @@ blockquote {
 
 	& q {
 		font-style: italic;
-		color: var(--green);
+		color: var(--red);
 
 	}
 
@@ -131,14 +131,11 @@ blockquote {
 
 .quotes {
 
-	margin-inline: 25px;
-	padding: 16px 16px;
+	margin-inline: 12px;
+	padding: 12px 12px;
 	background-color: var(--yellow);
 	font-style: italic;
 	border: 1px solid black;
-
-	font-size: 1.125rem;
-	line-height: 1.56rem;
 	font-weight: 400;
 }
 
@@ -153,8 +150,8 @@ blockquote {
 		}
 
 		& .paragraph-container {
-			border-right: 1px solid black;
-			padding-right: 16px;
+			border-right: 0px solid black;
+			padding-right: 0px;
 
 		}
 
@@ -163,8 +160,8 @@ blockquote {
 
 	&:nth-of-type(2n+1) {
 		& .paragraph-container {
-			border-left: 1px solid black;
-			padding-left: 16px;
+			border-left: 0px solid black;
+			padding-left: 0px;
 		}
 	}
 
@@ -175,7 +172,7 @@ blockquote {
 
 nav {
 
-	padding: 8px 25px;
+	padding: 8px 12px;
 	display: flex;
 	justify-content: space-between;
 
@@ -202,7 +199,7 @@ footer {
 	&>:nth-child(1) {
 
 		border-top: 2px solid #000000;
-		padding: 16px 25px;
+		padding: 16px 12px;
 
 		display: flex;
 		justify-content: space-between;
@@ -233,7 +230,7 @@ footer {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 6px;
-		margin: 0px 25px;
+		margin: 0px 12px;
 
 
 		& p {
@@ -256,12 +253,13 @@ footer {
 
 h1 {
 
-	font-size: 3.43rem;
-	line-height: 2.75rem;
+	width: 90%;
+	font-size: 54px;
+	line-height: 54px;
 	font-weight: 500;
 	text-transform: uppercase;
 	margin-top: 30px;
-	margin-inline: 25px;
+	margin-inline: 12px;
 
 	display: flex;
 	flex-direction: column;
@@ -312,10 +310,11 @@ h1 {
 @media (min-width:600px) {
 
 	:root {
-		--body-width: 500px;
+		--body-width: 5860px;
 	}
 
 	h1 {
+		width: 78%;
 		font-size: 64px;
 		line-height: 64px;
 		gap: 18px;
@@ -326,7 +325,7 @@ h1 {
 			&:nth-child(1),
 			&:nth-child(2) span,
 			&:nth-child(3) {
-				padding: 12px 16px;
+				padding: 12px 12px;
 			}
 
 			&:nth-child(2) {
@@ -342,7 +341,7 @@ h1 {
 	.paragraph-box {
 		&:nth-of-type(2n) {
 			& .paragraph-container {
-
+				border-right: 1px solid black;
 				padding-right: 32px;
 			}
 		}
@@ -350,6 +349,7 @@ h1 {
 
 		&:nth-of-type(2n+1) {
 			& .paragraph-container {
+				border-left: 1px solid black;
 				padding-left: 32px;
 			}
 		}
@@ -395,6 +395,11 @@ h1 {
 	}
 
 	.paragraph-container {
+
+		& span {
+			font-weight: 700;
+		}
+
 	
 		& a {
 			text-decoration: underline;
@@ -402,7 +407,7 @@ h1 {
 	
 		& q {
 			font-style: italic;
-			font-weight: 400;
+			font-weight: 700;
 		}
 	}
 
@@ -516,7 +521,6 @@ h1 {
 		width: fit-content;
 		position: absolute;
 		bottom: 0;
-		/* left: 0; */
 		transform: translateY(50%);
 
 
@@ -571,11 +575,13 @@ h1 {
 	}
 
 	#final-quote {
-				margin-block: 60px;
-				& p {
-					font-size: 27px;
-					line-height: 40px;
-				}
+		margin-block: 60px;
+
+		& p {
+			font-size: 27px;
+			line-height: 40px;
+		}
+				
 			}
 
 	nav {

@@ -22,7 +22,6 @@ html {
 	--red: #FF4000;
 	--body-width: 450px;
 	--blue-highlight: rgba(167, 255, 230, 1);
-
 	--bg: #FEFFF5;
 }
 
@@ -33,7 +32,6 @@ html {
 	--red: #5F605A;
 	--green-highlight: #E8E9E4;
 	--blue-highlight: #E8E9E4;
-
 }
 
 p {
@@ -62,7 +60,6 @@ blockquote {
 	margin-right: 12px;
 	margin-left: auto;
 	width: fit-content;
-
 
 	& p {
 		font-size: 20px;
@@ -301,48 +298,49 @@ h1 {
 			&:has(#dark-mode:checked)> :nth-child(2) {
 				color: transparent;
 
-				&:hover{
+				&:hover {
 					background-color: black;
 					cursor: pointer;
 				}
-			
+
 			}
 
-		
 
-		&:has(#dark-mode:not(:checked))> :nth-child(1) {
-			color: transparent;
-			&:hover{
-				background-color: black;
-				cursor: pointer;
+
+			&:has(#dark-mode:not(:checked))> :nth-child(1) {
+				color: transparent;
+
+				&:hover {
+					background-color: black;
+					cursor: pointer;
+				}
+			}
+
+
+			&>:nth-child(1) {
+				border-right: none;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+
+			}
+
+			&>:nth-child(2) {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+
 			}
 		}
-	
 
-		& >:nth-child(1) {
-			border-right: none;
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-
+		&:nth-child(3) {
+			background-color: var(--yellow);
+			font-style: italic;
+			font-weight: 400;
 		}
 
-		& >:nth-child(2) {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-
+		&:nth-child(1) {
+			margin-left: 8%;
 		}
 	}
-
-	&:nth-child(3) {
-		background-color: var(--yellow);
-		font-style: italic;
-		font-weight: 400;
-	}
-
-	&:nth-child(1) {
-		margin-left: 8%;
-	}
-}
 }
 
 
@@ -729,13 +727,6 @@ h1 {
 
 
 @media print {
-
-	:root {
-		--yellow: #EBEBE8;
-		--links: #00000;
-		--green-highlight: #EBEBE8;
-		--red: #5F605A
-	}
 
 	.sticky-button {
 		display: none;

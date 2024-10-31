@@ -300,14 +300,22 @@ h1 {
 
 			&:has(#dark-mode:checked)> :nth-child(2) {
 				color: transparent;
-				cursor: pointer;
+
+				&:hover{
+					background-color: black;
+					cursor: pointer;
+				}
+			
 			}
 
 		
 
 		&:has(#dark-mode:not(:checked))> :nth-child(1) {
-			cursor: pointer;
 			color: transparent;
+			&:hover{
+				background-color: black;
+				cursor: pointer;
+			}
 		}
 	
 

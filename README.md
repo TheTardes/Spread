@@ -1,5 +1,5 @@
 This is our Project 2 responsive design
-Reading material - hooked on a feeling
+The reading we choose is "hooked on a feeling" by Micheal Rock. The author primarily discusses about how performance is shifting beyond rationality, and how the moodboard represents feeling. We try to incorporate the moodboard concept into a formal grid based layout for legibility and readability. We also included interactive buttons to make the website feel more dynamic and less like a static poster.
 
 Full Design and print verison is not done yet.
 

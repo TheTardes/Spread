@@ -1,18 +1,9 @@
-This is our Project 2 responsive design
+Project 2-Responsive design
 
-The reading we chose is "Hooked on a Feeling" by Micheal Rock. The author primarily discusses about how performance is shifting beyond rationality, and how the moodboard represents feeling. We try to incorporate the moodboard concept into a formal grid based layout for legibility and readability. We also included interactive buttons to make the website feel more dynamic and less like a static poster.
+As a group, we created a website in HTML and CSS based on the reading we chose "Hooked on a Feeling" by Micheal Rock.
 
-Full Design and print verison is not done yet.
+The author primarily discusses about how performance is shifting beyond rationality, and how the moodboard represents feeling. 
 
-To do:
-- We need to connect quotes with paragaph lines
-- Switch toggle "on" to "off" with no color..
-- Print version layout
-- Figure out max and min width for mobile - delete margins from each block
+To reflect this, we designed a  layout that emphasizes legibility and readability while evoking the moodboard concept. We added interactive buttons to enhance the website's dynamic feel, less like a static poster format and bringing the design to life.
 
-10/29 Update:
-Switch toggle can not be done in html&css, only in javascript.
-5 screen size (phone×2, tablet, desktop×2),1 print
-
-
-  Inji & Yuting
+Inji & Yuting
